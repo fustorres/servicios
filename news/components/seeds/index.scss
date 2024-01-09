@@ -1,0 +1,11 @@
+$andes-theme: 'mercadolibre';
+$mdu: 8px;
+
+@import '~@mshops-components-library/common';
+@import '~ui-library_ml/src/components/item/styles/item';
+@import '~ui-library_ml/src/components/carousel-draggable/styles/draggable';
+@import '~sass-rem/rem';
+
+.editable-wrapper .recommendations .section-header a {
+  display: none;
+}

@@ -1,0 +1,19 @@
+@import '../src/vendor/slick-theme.scss';
+@import '../src/vendor/slick.scss';
+.carousel-container {
+  position: relative;
+}
+
+.slick-slider {
+  position: static;
+
+  .slick-slide {
+    .slick-disabled {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    position: relative;
+  }
+}
+  

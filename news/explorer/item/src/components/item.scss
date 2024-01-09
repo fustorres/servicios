@@ -1,0 +1,86 @@
+@import '~loki-price/styles/Price';
+@import './item-bookmark';
+@import './item-price';
+@import './item-shipping';
+@import './item-title';
+@import './item-review';
+@import './item-states';
+@import './item-image';
+
+.ui-item {
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  color: #333;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1), 0 -1px 2px 0 rgba(0, 0, 0, .1);
+  display: inline-flex;
+  position: relative;
+  text-decoration: none;
+  flex-direction: column;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 8px 16px;
+  z-index: 1;
+
+  &__content {
+    position: relative;
+    border-top: 1px solid rgba(51, 51, 51, .1);
+    padding: 24px 16px 16px;
+  }
+
+  &__discount-box {
+    align-items: center;
+    border-radius: rem(24px);
+    column-gap: rem($andes-spacing-4);
+    display: flex;
+    justify-content: center;
+    margin: rem($andes-spacing-12) rem($andes-spacing-16);
+    padding: rem($andes-spacing-4) rem($andes-spacing-8);
+    position: absolute;
+    z-index: 1;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__material {
+    &-content {
+      padding: rem($andes-spacing-16);
+      position: relative;
+    }
+
+    &-price {
+      &-block {
+        padding-top: rem($andes-spacing-20);
+      }
+    }
+  }
+
+  .ui-item__content--with-original-price {
+    padding-top: rem($andes-spacing-8);
+  }  
+}
+
+.mshops-recommendations-wrapper .carousel-with-tabs {
+  .ui-item {
+    width: 100%;
+
+    .ui-item__image-container {
+      align-items: center;
+      display: flex;
+      height: rem(288px);
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .ui-item:after {
+    box-shadow: none;
+  }
+}

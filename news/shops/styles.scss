@@ -1,0 +1,27 @@
+@media screen and (max-width: 768px) {
+    .home.home--explorer .mshops-recommendations-wrapper .recommendations .section_sub-header h3,.home.home--explorer .fake-card-container.fake-card-container--grid .recommendations .section_sub-header h3 {
+        border-bottom-left-radius:30px;
+        border-bottom-right-radius: 30px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px
+    }
+}
+
+.home .home--explorer .ui-item_wrapper .ui-item_content {
+    flex-direction: column-reverse;
+    margin: 3px 3px 22px 8px
+}
+
+@media screen and (max-width: 768px) {
+    .home.home--explorer .home.home--explorer .ui-item_wrapper .ui-item {
+        display:flex
+    }
+}
+
+.home .home--explorer .ui-item_content {
+    display: flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border: 0
+}

@@ -1,0 +1,89 @@
+// Cases map.
+$cases: (
+  "default": $item-max-height - 30px,
+  "withInstallments": $item-max-height - 8px,
+  "withActions": 384px,
+  "withDiscount": $item-max-height - 20px,
+  "withActionsAndDiscount": 392px,
+  "withInstallmentsAndDiscount": $item-max-height,
+  "withAttributes": $item-max-height - 6px,
+  "singleWithInstallmentsOrAttributes": $item-max-height - 28px, // uses same height value.
+  "singleLineDescription": 314px,
+  "withActionsAndAttributes": $item-max-height,
+);
+
+// get height by case function.
+@function getHeightByCase($case){
+  // check for keys.
+  @if not map-has-key($cases, $case) {
+    @warn "Key `#{$key}` not found in $cases map.";
+  }
+  @return map-get($cases, $case);
+}
+
+// Height mixin
+@mixin _height($case) {
+  height: getHeightByCase($case);
+}
+
+.ui-item {
+  transition: height 1s ease-out;
+
+  &__title, &__discount-price.price-tag, &__action {
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition-duration $transition-timing-function;
+    transition-property: opacity, top;
+    
+    // No delay to be hidden during collapsing.
+    transition: visibility 0s;
+  }
+
+  &_price-block {
+    margin-top: -2px;
+    transition: margin-top 1s ease-out;
+  }
+
+  &:hover {
+    @include _height(default);
+
+    &.with-installments {
+      @include _height(withInstallments);
+    }
+    &.with-actions {
+      @include _height(withActions);
+    }
+    &.with-discount {
+      @include _height(withDiscount);
+    }
+    &.with-actions.with-discount {
+      @include _height(withActionsAndDiscount);
+    }
+    &.with-installments.with-discount {
+      @include _height(withInstallmentsAndDiscount);
+    }
+    &.with-attributes {
+      @include _height(withAttributes);
+    }
+    &.with-installments.with-single-line-description,
+    &.with-attributes.with-single-line-description {
+      @include _height(singleWithInstallmentsOrAttributes);
+    }
+    &.with-single-line-description {
+      @include _height(singleLineDescription);
+    }
+    .ui-item__title, .ui-item__discount-price, .ui-item__action {
+      opacity: 1;
+      visibility: visible;
+
+      // Delay 0.1 seconds before becoming visible.
+      transition: visibility $transition-duration $transition-visibility-delay;
+    }
+    &.with-discount .ui-item__price-block {
+      margin-top: 6px;
+    }
+    .ui-item__discount-price.price-tag {
+      top: 13px;
+    }
+  }
+}

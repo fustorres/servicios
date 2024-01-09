@@ -1,0 +1,52 @@
+.ui-item__shipping {
+    border-radius: 16px;
+    height: auto;
+    margin-top: 8px;
+    padding: 2px 8px;
+    position: relative;
+    right: inherit;
+    top: auto;
+    width: fit-content;
+  
+    &-icon {
+      fill: #666;
+      width: 20px;
+      left: 8px;
+      top: 9px;
+      position: absolute;
+    }
+  
+    &-icon--material {
+      fill: #666;
+      margin: $andes-spacing-8 $andes-spacing-8 $andes-spacing-8 0;
+      width: 20px;
+    }
+  
+    &-free &-icon,
+    &-free &-icon--material {
+      fill: #39b54a;
+    }
+  
+    &-label {
+      display: none;
+    }
+  
+    &-label--material {
+      color: #39b54a;
+      font-weight: $font-weight-bold;
+      margin-bottom: $andes-spacing-4;
+    }
+  }
+  
+  .ui-item__shipping--material {
+    align-items: center;
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+  
+    &.ui-item__shipping--hidden {
+      display: none;
+    }
+  }
+  
+  

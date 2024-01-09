@@ -1,0 +1,73 @@
+@import '../desktop';
+@import 'common';
+
+$explora-gray-border: #e2e2e2;
+
+.mshops-recommendations-wrapper {
+  .row {
+    div.ui-item_wrapper,
+    div.slick-track {
+      height: rem(440px);
+    } 
+  }
+
+  .carousel-with-tabs {
+    .ui-item {
+      border-radius: rem(10px);
+      border: rem(1px) solid $andes-gray-100-solid;
+      box-sizing: border-box;
+      color: $andes-black;
+      height: auto;
+      overflow: hidden;
+
+      .ui-item_title {
+        color: $andes-black;
+        font-size: rem($font-size-16);
+        line-height: 1.2;
+        order: 1;
+        padding: 0 0 rem($andes-spacing-12) 0;
+        visibility: visible;
+      }
+
+      .ui-item_image-container {
+        max-height: rem(320px);
+        height: auto;
+      }
+    }
+  }
+} 
+
+.home.home--explorer .ui-item__wrapper .ui-item_content {
+  margin-bottom: 0;
+}
+
+.ui-item__discount-text.ui-item__discount-text--secondary {
+  font-size: rem(13px);
+}
+
+.mshops-recommendations-wrapper .recommendations .carousel-container .ui-item {
+  height: rem(424px);
+}
+
+.ui-item__shipping.ui-item__shipping-free.ui-item__shipping--hidden {
+  margin: rem($andes-spacing-16) rem($andes-spacing-20);
+}
+
+
+/* TODO: remove specificity when delete styles in layout-templates */
+.home.home--explorer .mshops-recommendations-wrapper .carousel-with-tabs .ui-item__wrapper .ui-item {
+  height: rem(430px);
+
+  &:hover {
+    height: auto !important;
+  }
+}
+
+.ui-item .ui-item__discount-box.ui-item__discount-box--short-text {
+  border-radius: 50%;
+  height: rem(50px);
+  line-height: rem(16px);
+  min-width: auto;
+  text-align: center;
+  width: rem(50px);
+}

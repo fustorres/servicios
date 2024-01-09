@@ -1,0 +1,71 @@
+@import './variables';
+@import './item';
+@import './item-animation';
+
+.ui-item {
+  @include item-size($item-width, $item-min-height);
+
+  .ui-item__installments,
+  .ui-item__attributes {
+    margin-top: rem(1px);
+  }
+
+  .ui-item__price-block {
+    margin-top: rem(-2px);
+  }
+
+  &.price-digits-6 {
+    @include price-digits(rem($andes-spacing-24), $font-size-14);
+    .ui-item__discount-text {
+      vertical-align: rem(2px);
+    }
+  }
+  &.price-digits-7 {
+    @include price-digits(22px, $font-size-14);
+    .ui-item__discount-text {
+      font-size: rem($font-size-14);
+    }
+  }
+
+  &.price-digits-6,
+  &.price-digits-7 {
+    .ui-item {
+      .ui-item__content {
+        padding: rem($andes-spacing-24) rem(10px) rem(14px) rem($andes-spacing-24);
+      }
+    }
+  }
+
+  &.price-digits-7,
+  &.price-digits-8 {
+    .price-tag-symbol,
+    .price-tag-fraction,
+    .price-tag-decimal-separator,
+    .price-tag-cents {
+      padding-bottom: rem(2px);
+    }
+  }
+}
+
+/* Cards height normalizaer */
+div.mshops-recommendations-wrapper
+{  
+  padding-bottom: rem($andes-spacing-32) !important; 
+
+  .slick-track {
+    display: flex;
+    height: auto !important;
+    
+    .slick-slide,
+    .ui-item,
+    .ui-item_wrapper,
+    .with-installments {
+      display: flex;
+      height: auto !important;
+    }
+  }
+
+  div.carousel-container {
+    max-height: unset;
+  }
+}

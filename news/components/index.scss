@@ -1,0 +1,41 @@
+// wdvms = week deal view more slide
+
+.wdvms {
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+  
+    &-content {
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+  
+    &-picture {
+      margin: 24px auto 12px;
+      img {
+        display: block;
+      }
+    }
+  
+    &-picture, &-picture img {
+      height: 70px;
+      width: 70px;
+    }
+  
+    &-label {
+      font-size: 16px;
+    }
+  
+    &-view-more {
+      background-color: $andes-blue-400;
+      border-radius: 2px;
+      color: #fff;
+      font-weight: $font-weight-semibold;
+      padding: 5px;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
+  }
+  

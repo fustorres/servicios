@@ -1,0 +1,110 @@
+.ui-item {
+    &_price-block {
+      overflow: hidden;
+    }
+  
+    &__price {
+      color: #333;
+      font-size: rem($font-size-24);
+      line-height: $line-height-s;
+    }
+  
+    &__price_image {
+      font-size: rem($font-size-24);
+      line-height: $line-height-s;
+    }
+  
+    &__discount {
+      &-price {
+        color: $andes-gray-900;
+        font-size: rem($font-size-14);
+        position: inherit;
+        text-decoration: $andes-gray-900 line-through;
+  
+        &--hidden {
+          display: none;
+        }
+      }
+  
+      &-text {
+        color: $andes-black;
+        font-size: rem($font-size-14);
+        font-weight: $font-weight-semibold;
+        padding: 0;
+        width: fit-content;
+      }
+    }
+  
+    &__installments, &__attributes {
+      color: #333;
+      display: block;
+      font-size: rem($font-size-14);
+      margin-top: rem(5px);
+    }
+  
+    &__installments:after, &__attributes:after {
+      content: '\200b'; // takes up height even when empty
+    }
+  
+    &__material {
+      &-price {
+        color: $andes-black;
+        font-size: rem($font-size-28);
+        font-weight: $font-weight-semibold;
+        line-height: $line-height-s;
+      }
+  
+      &-discount {
+        &-price {
+          color: $andes-black;
+          font-size: rem($font-size-20);
+          font-weight: $font-weight-light;
+          line-height: rem(25px);
+          text-decoration: rem(1px) $andes-black line-through;
+  
+          &--hidden {
+            display: none;
+          }
+        }
+  
+        &-text {
+          font-size: rem($font-size-14);
+          font-weight: $font-weight-semibold;
+        }
+      }
+  
+      &-installments {
+        color: $andes-black;
+        display: block;
+        font-size: rem($font-size-20);
+        font-weight: $font-weight-light;
+        line-height: rem(25px);
+      }
+    }
+  }
+  
+  .ui-item_price-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .ui-item__price {
+    font-weight: 600;
+  }
+  
+  .ui-item_formatted-price {
+    align-items: center;
+    display: flex;
+  }
+  
+  .ui-item_formatted-price-cents {
+    font-size: $font-size-14;
+  }
+  
+  .ui-item__original-price {
+    color: $andes-gray-250;
+    font-size: rem($font-size-14);
+    line-height: rem($andes-spacing-16);
+    text-decoration: $andes-gray-250 line-through;
+  }
+  

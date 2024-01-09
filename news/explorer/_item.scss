@@ -1,0 +1,172 @@
+@import '../components/UiItem/styles/item.scss';
+
+@mixin price-digits($itemPriceFontSize, $disabledItemPriceFontSize) {
+  .price-tag.ui-item__price {
+    font-size: rem($itemPriceFontSize);
+  }
+  .price-tag__disabled {
+    font-size: rem($disabledItemPriceFontSize);
+  }
+
+  &.items-per-row-5 {
+    .price-tag__disabled {
+      font-size: rem($font-size-16);
+    }
+  }
+}
+
+@mixin item-size($imageSize, $cardHeight) {
+  margin: 0;
+  width: $imageSize;
+  height: auto;
+  img, .ui-item__image-container {
+    width: $imageSize;
+    height: $imageSize;
+  }
+
+  .ui-item_wrapper {
+    margin: 0 0.5rem 1.75rem;
+    width: 224px;
+    height: auto;
+  }
+}
+
+@mixin item-container-setup() {
+  /* Set the max-height of the item to the container, in order to avoid repainting during the transition */
+  height: $item-max-height+$item-shadow;
+
+  /* Negative margin bottom to compensate the offset of the item max-height */
+  margin-bottom: ($item-min-height)-(($item-max-height+$item-shadow));
+}
+
+.price-tag.ui-item__price {
+  .price-tag-symbol, .price-tag-fraction {
+    min-height: rem($andes-spacing-32);
+    display: inline-flex;
+    align-items: flex-end
+  }
+}
+
+.ui-item {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+  display: inline-block;
+  vertical-align: text-top;
+
+  .ui-item__bookmark {
+    outline: none;
+  }
+
+  .ui-item__title {
+    margin-bottom: 0;
+    margin-top: rem(6px);
+    min-height: auto;
+  }
+
+  .ui-item__title,
+  .ui-item__discount-price.price-tag {
+    opacity: 1;
+  }
+
+  .ui-item__discount-price.price-tag {
+    top: rem(14px);
+  }
+
+  &.material {
+    box-shadow: none;
+
+    .price-tag__disabled {
+      display: table-row;
+      position: relative;
+      top: 0;
+    }
+
+    &.price-digits-5 {
+      @include price-digits($font-size-28, $font-size-20);
+    }
+
+    &.price-digits-6 {
+      @include price-digits($font-size-28, $font-size-20);
+    }
+  }
+
+  .price-tag__disabled {
+    position: absolute;
+  }
+
+  &.price-text .ui-item__price {
+    font-size: rem($font-size-20);
+  }
+
+  .price-tag-cents {
+    display: none;
+  }
+
+  &.price-digits-5 {
+    @include price-digits(23px, $font-size-14);
+  }
+
+  &.price-digits-6 {
+    @include price-digits(20px, $font-size-14);
+  }
+
+  &.price-digits-7 {
+    @include price-digits(18px, $font-size-14);
+
+    .ui-item__discount-text {
+      font-size: rem($font-size-12);
+    }
+  }
+
+  &.price-digits-8 {
+    @include price-digits(17px, $font-size-14);
+
+    .ui-item__discount-text {
+      font-size: rem($font-size-12);
+    }
+  }
+
+  &.price-digits-9,
+  &.price-digits-10,
+  &.price-digits-11 {
+    @include price-digits(16px, $font-size-14);
+
+    .ui-item__discount-text {
+      font-size: rem($font-size-12);
+    }
+  }
+}
+
+.low-end {
+  a.ui-item, a.ui-item:hover {
+    .ui-item__bookmark {
+      display: none;
+    }
+  }
+}
+
+.home:not(.home--custom-html) {
+  .ui-item__content .ui-item__shipping {
+    border-radius: rem(15px);
+    box-shadow: 0px 0px rem(2px) 0px $andes-gray-250;
+    display: flex;
+    height: auto;
+    margin-top: rem($andes-spacing-4);
+    padding: rem($andes-spacing-4) rem($andes-spacing-12);
+    width: auto;
+  
+    .ui-item__shipping-icon {
+      height: rem(14px);
+      left: unset;
+      margin-right: rem(3px);
+      margin-top: rem(2px);
+      position: relative;
+      top: unset;
+      width: rem(19px);
+    }
+  
+    .ui-item__shipping-label {
+      display: block;
+      font-size: rem($font-size-12);
+    }
+  }
+}

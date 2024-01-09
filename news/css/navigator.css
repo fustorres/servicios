@@ -1,0 +1,32 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body{
+    border-collapse: collapse;
+    display: table;
+    background-color: #eee;
+    font-family: Arial, "Nimbus Sans L", sans-serif;
+    font-size: 14px;
+    table-layout: fixed;
+}
+.nav-header,[role=main],.nav-footer {
+    display: table-row;
+    width: 100%
+}
+
+[role=main] {
+    height: 100%
+}
+
+[role=main] .nav-bounds {
+    box-sizing: border-box
+}
+
+[role=main] .nav-bounds[class*=ch-box-] {
+    border: none;
+    background-color: rgba(0,0,0,0)
+}

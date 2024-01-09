@@ -1,0 +1,119 @@
+@import '../../index';
+
+@import '~@mshops-components-library/item/src/styles/desktop';
+
+.recommendations {
+  .slick-list {
+    @include item-container-setup();
+    white-space: nowrap;
+  }
+
+  .ui-item {
+    white-space: normal;
+  }
+
+  .carousel-container {
+
+    .prev-button,
+    .next-button {
+      box-sizing: border-box;
+      top: 120px;
+    }
+  }
+
+  @import '../components/Seeds';
+
+  .section-header h2.section-header__title--base {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.mshops-recommendations-wrapper {
+  height: 100%;
+
+  .carousel-container .ui-item {
+    height: rem(420px);
+  }
+
+  .ui-item__title {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .slick-list {
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .slick-track {
+    height: rem(424px);
+  }
+
+  .ui-item__price-block {
+    margin-top: $mdu;
+  }
+
+  .price-tag-cents {
+    display: block;
+  }
+
+  .section-header__title--base {
+    color: $andes-black;
+    font-size: rem($font-size-16);
+    font-weight: $font-weight-bold;
+    margin-bottom: rem($andes-spacing-32);
+    text-align: flex-start;
+  }
+
+  .section__sub-header h3 {
+    font-size: rem($font-size-16);
+    padding: rem($andes-spacing-16);
+  }
+
+  .section-eshop__title--layout {
+    align-items: baseline;
+    display: flex;
+    gap: rem(10px);
+    margin-bottom: rem($andes-spacing-24);
+    max-width: rem(1200px);
+
+    a {
+      align-items: center;
+      color: $andes-blue-500;
+      cursor: pointer;
+      display: flex;
+      font-size: rem($font-size-16);
+      font-weight: $font-weight-regular;
+      margin-right: rem($andes-spacing-8);
+
+      svg {
+        path {
+          fill: $andes-blue-500;
+        }
+      }
+    }
+    .section-header__title--base {
+      color: $andes-text-color-primary;
+      font-size: rem($font-size-24);
+      font-weight: $font-weight-semibold;
+      margin-bottom: 0;
+      text-align: flex-start;
+    }
+  }
+
+  .ui-ms-section-eshops {
+    .slick-slide {
+      margin-right: rem(16px);
+      width: rem(224px) !important;
+
+    }
+
+    .slick-list {
+      white-space: normal;
+    }
+
+    .andes-carousel-snapped__container.andes-carousel-snapped__container--content {
+      margin-left: rem(10px);
+    }
+  }
+}

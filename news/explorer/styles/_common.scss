@@ -1,0 +1,28 @@
+a.ui-item {
+    border: 0.0625rem solid #ededed;
+    border-radius: rem($border-radius-6);
+    box-shadow: none;
+  }
+  
+  .price-tag__disabled:after {
+    display: none;
+  }
+  
+  .home.home--explorer {
+    .ui-item__price {
+      color: $andes-black;
+      font-size: rem($font-size-20);
+      font-weight: $font-weight-semibold;
+    }
+  
+    .ui-item__discount-text--secondary {
+      font-weight: $font-weight-regular;
+    }
+  }
+  
+  .ui-item__shipping.ui-item__shipping-free.ui-item__shipping--hidden {
+    border-radius: rem($andes-spacing-16);
+    bottom: 0;
+    top: inherit;
+  }
+  

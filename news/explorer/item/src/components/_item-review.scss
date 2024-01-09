@@ -1,0 +1,32 @@
+.ui-review {
+    margin-top: 15px;
+  
+    &-total {
+      font-size: 12px;
+      color: #333;
+      vertical-align: 4px;
+    }
+  
+    &-star {
+      width: 18px;
+      height: 18px;
+  
+      &__full {
+        fill: #3483fa;
+      }
+  
+      &__half {
+        &-icon {
+          fill: #3483fa;
+          position: absolute;
+          width: 17px;
+          height: 17px;
+        }
+      }
+  
+      &__empty {
+        fill: #ddd;
+      }
+    }
+  }
+  

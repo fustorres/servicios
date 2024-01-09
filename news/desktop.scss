@@ -1,0 +1,29 @@
+section {
+    > .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 0;
+  
+      @media (max-width: 769px) {
+        margin: 0 20px;
+      }
+    }
+    
+    .section-header {
+        margin-bottom: 1.375rem;
+    
+        h1,
+        h2,
+        .section-header_title--base {
+          font-size: 26px;
+          font-weight: 300;
+          margin: 0 0 0 8px;
+        }      
+        
+        a {
+          margin-left: 1rem;
+        }
+      }        
+    
+  }
+  

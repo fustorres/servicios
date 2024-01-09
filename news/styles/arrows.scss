@@ -1,0 +1,41 @@
+.carousel-container {
+    .arrow-visible {
+      .next-button, .prev-button {
+        display: none;
+      }
+    }
+  
+    .arrow-disabled {
+      opacity: 0;
+    }
+
+  .prev-button:before,
+  .prev-button:after,
+  .next-button:before,
+  .next-button:after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 2px;
+    background: #3483fa;
+    position: absolute;
+  }
+
+  .prev-button:before,
+  .prev-button:after {
+    left: 50%;
+    margin-left: -8px;
+  }
+
+    .prev-button:before {
+      transform: rotate(-45deg);
+      top: 50%;
+      margin-top: -5px;
+    }
+
+    .prev-button:after {
+      transform: rotate(45deg);
+      bottom: 50%;
+      margin-bottom: -6px;
+    }
+}  

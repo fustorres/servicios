@@ -1,0 +1,46 @@
+.ui-item__title,
+.ui-item__brand {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.ui-item__title {
+  color: #666;
+  margin-top: 12px;
+  max-height: 2.6em;
+  overflow: hidden;
+}
+
+.ui-item__action,
+.ui-item__brand {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.ui-item__brand {
+  color: #999;
+  margin-top: 2px;
+
+  &:hover {
+    color: #666;
+  }
+}
+
+.ui-item__action {
+  outline: none;
+  margin-top: 12px;
+  color: #3483fa;
+  font-size: 15px;
+  + .ui-item__action {
+    margin-left: 24px;
+  }
+}
+
+.material {
+  .ui-item__title {
+    font-size: rem($font-size-18);
+  }
+}

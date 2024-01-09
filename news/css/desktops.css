@@ -1,0 +1,53 @@
+.recommendations {
+    .carousel-with-tabs,
+    .carousel-container {
+      .prev-button,
+      .next-button {
+        box-shadow: none;
+        box-sizing: border-box;
+        display: block;
+        height: 2.1875rem;
+        top: 11.25rem !important;
+        transform: rotate(225deg) scale(0.7);
+        width: 2.5rem;
+      }
+  
+
+.prev-button{
+    left: -3.5rem;
+    right: unset;
+}
+
+.prev-button::before,
+    .next-button::before {
+      background-color: transparent;
+      border-color: #000;
+      border-style: solid;
+      border-width: 0.375rem 0.375rem 0 0;
+      content: '';
+      display: block;
+      height: 100%;
+      position: unset;
+      transform: scale(.7);
+      transform-origin: 100% 0;
+      width: 100%;
+    }
+
+    .prev-button::after,
+    .next-button::after {
+      background-color: transparent;
+      border-color: #000;
+      border-style: solid;
+      border-width: 0 0.375 0 0;
+      content: '';
+      float: left;
+      height: 120%;
+      left: 0;
+      position: relative;
+      top: -105%;
+      transform: rotate(45deg);
+      transform-origin: 100% 0;
+      width: 100%;
+    }
+    }
+}

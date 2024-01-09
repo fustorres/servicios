@@ -1,0 +1,9 @@
+@mixin break-points-desktop {
+    .slide-not-full {
+      @include not-full();
+    }
+  
+    .carousel-container {
+      width: 100% !important;
+    }
+}
