@@ -39,7 +39,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html', // plantilla para el archivo html principal
+      template: 'contacto.html', // plantilla para el archivo html principal
     }),
   ],
 };
