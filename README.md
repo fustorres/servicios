@@ -168,11 +168,3 @@ Debug complex issues in the React + PHP integration.
 Improve error handling, UX copy and documentation (README, case study, etc.).
 
 AI does not replace the developer; it acts as a copilot that speeds up learning and helps turn ideas into a working product more quickly.
-
-text
-
-Puedes:
-
-- Cambiar `<your-user>` por tu usuario real de GitHub.
-- Ajustar rutas exactas (`backend/`, `frontend/`, etc.) si en tu repo difieren.
-- Añadir luego enlaces a demo o capturas si decides incrustar imágenes en el README.
