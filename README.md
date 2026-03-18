@@ -4,31 +4,38 @@ _Landing page_ de servicios de reparación y mantenimiento de computadores y por
 
 - [Landing page de tipo servicios](https://fustorres.github.io/servicios/news)
 
-## Contenido del repositorio
+Repository contents
+portfolio/: landing page and portfolio code (HTML, CSS, JS).
 
-- `portfolio/`: código de la landing y portafolio (HTML, CSS, JS).
-- `assets/`, `public/` (si aplica): recursos estáticos (imágenes, iconos, fuentes).
+assets/, public/ (if applicable): static assets (images, icons, fonts).
 
-## Tecnologías
+Technologies
+HTML5 and CSS3 (responsive layout).
 
-- HTML5 y CSS3 (maquetación responsiva).
-- JavaScript vanilla para interactividad (tema oscuro/claro, modales, etc.).
-- GitHub Pages para despliegue.
+Vanilla JavaScript for interactivity (dark/light theme, modals, etc.).
 
-## Proyecto destacado: Parking Management System
+GitHub Pages for deployment.
 
-Este repositorio documenta también un proyecto full‑stack aparte: un sistema de gestión de parqueaderos para motos (repo `PARKING`, privado o en preparación).
+Featured project: Parking Management System
+This repository also documents a separate full‑stack project: a motorcycle parking management system (repo PARKING, private or in preparation).
 
-**Resumen del sistema de parqueaderos:**
+Parking system summary:
 
-- Registro de entradas y salidas con cálculo automático de tarifas.
-- Manejo de suscripciones mensuales y pagos.
-- Tickets imprimibles con CSS `@media print`.
-- Reportes por rango de fechas, tipo de pago, cajero y estado.
-- Módulo de usuarios y roles (admin / cajero).
-- Backend en PHP + MySQL (API estilo REST).
-- Frontend en React (Vite).
-- Auth con JWT.
+Check‑in and check‑out records with automatic fee calculation.
+
+Management of monthly subscriptions and payments.
+
+Printable tickets using CSS @media print.
+
+Reports by date range, payment type, cashier, and status.
+
+User and role module (admin / cashier).
+
+Backend in PHP + MySQL (REST‑style API).
+
+Frontend in React (Vite).
+
+Auth with JWT. Auth con JWT.
 
 ---
 
