@@ -4,38 +4,32 @@ _Landing page_ de servicios de reparación y mantenimiento de computadores y por
 
 - [Landing page de tipo servicios](https://fustorres.github.io/servicios/news)
 
-Repository contents
-portfolio/: landing page and portfolio code (HTML, CSS, JS).
+## Repository contents
 
-assets/, public/ (if applicable): static assets (images, icons, fonts).
+- `portfolio/`: landing page and portfolio code (HTML, CSS, JS).
+- `assets/`, `public/` (if applicable): static assets (images, icons, fonts).
 
-Technologies
-HTML5 and CSS3 (responsive layout).
+## Technologies
 
-Vanilla JavaScript for interactivity (dark/light theme, modals, etc.).
+- HTML5 and CSS3 (responsive layout).
+- Vanilla JavaScript for interactivity (dark/light theme, modals, etc.).
+- GitHub Pages for deployment.
 
-GitHub Pages for deployment.
+## Featured project: Parking Management System
 
-Featured project: Parking Management System
-This repository also documents a separate full‑stack project: a motorcycle parking management system (repo PARKING, private or in preparation).
+This repository also documents a separate full‑stack project: a motorcycle parking management system (repo `PARKING`, private or in preparation).
 
-Parking system summary:
+**Parking system summary:**
 
-Check‑in and check‑out records with automatic fee calculation.
+- Check‑in and check‑out records with automatic fee calculation.
+- Management of monthly subscriptions and payments.
+- Printable tickets using CSS `@media print`.
+- Reports by date range, payment type, cashier, and status.
+- User and role module (admin / cashier).
+- Backend in PHP + MySQL (REST‑style API).
+- Frontend in React (Vite).
+- Auth with JWT.
 
-Management of monthly subscriptions and payments.
-
-Printable tickets using CSS @media print.
-
-Reports by date range, payment type, cashier, and status.
-
-User and role module (admin / cashier).
-
-Backend in PHP + MySQL (REST‑style API).
-
-Frontend in React (Vite).
-
-Auth with JWT. Auth con JWT.
 
 ---
 
